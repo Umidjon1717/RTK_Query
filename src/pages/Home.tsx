@@ -40,7 +40,6 @@ const Home = () => {
 
       {error && <p className="text-red-600 text-center mb-4">{error}</p>}
 
-      {/* Create Blog Form */}
       <form
         onSubmit={handleCreateBlog}
         className="bg-white shadow-md rounded-lg p-6 max-w-lg mx-auto mb-6"
@@ -87,7 +86,6 @@ const Home = () => {
 
       <hr className="my-6" />
 
-      {/* Blog List */}
       <h2 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Blogs</h2>
       {blogs?.length ? (
         <div className="space-y-6">

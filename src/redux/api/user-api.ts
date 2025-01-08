@@ -22,14 +22,6 @@ const userApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Blogs"],
     }),
-    updateUser: builder.mutation<IUser, { id: string; data: IUserForm }>({
-      query: ({ id, data }) => ({
-        url: `/user/${id}`,
-        method: "PUT",
-        body: data,
-      }),
-      invalidatesTags: ["Blogs"],
-    }),
   }),
   overrideExisting: false,
 });
@@ -38,5 +30,4 @@ export const {
   useGetUsersQuery,
   useCreateUserMutation,
   useDeleteUserMutation,
-  useUpdateUserMutation,
 } = userApi;
